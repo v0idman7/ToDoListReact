@@ -1,0 +1,101 @@
+.list-item {
+  margin-top: 17px;
+  position: relative;
+  height: 80px;
+  padding: 16px 12px 13px 23px;  
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.list-item:first-of-type {
+  margin: 0;
+} 
+
+.list-item:hover, .list-item:focus {
+  border-color: rgba(47, 128, 237, 0.5);
+  box-shadow: 0 10px 20px rgba(47, 128, 237, 0.5);
+}
+
+.list-item:hover button, .list-item:focus button{
+  opacity: 1;
+}
+
+.list-item__text {
+  display: -webkit-box;
+  width: 100%;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-height: 20px;
+  color: #53565A;
+  white-space: pre-line;
+  overflow: hidden;
+}
+
+.list-item__mark {
+  position: absolute;
+  right: 73px;
+  top: 11px;
+  width: 183px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #FFFFFF;
+  background: #38B46C;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.list-item__mark:focus {
+  box-shadow: 0 4px 8px rgba(47, 128, 237, 0.5);
+  opacity: 1;
+}
+
+.list-item__del {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  background: url('../images/design/Delete.svg') #E1E1E1 center no-repeat;
+  border: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.list-item__del:focus {
+  opacity: 1;
+}
+
+.list-item--important .list-item__text {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.list-item--important .list-item__text::before {
+  content: '\00A0\00A0\00A0\00A0\00A0\00A0';
+  width: 20px;
+  height: 20px;
+  background: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.98438 13.4062L13.7344 15.6562L12.75 11.3906L16.0781 8.48438L11.6719 8.10938L9.98438 4.07812L8.29688 8.10938L3.89062 8.48438L7.21875 11.3906L6.23438 15.6562L9.98438 13.4062ZM19.9688 7.21875L14.5312 11.9531L16.1719 18.9844L9.98438 15.2344L3.79688 18.9844L5.4375 11.9531L0 7.21875L7.17188 6.60938L9.98438 0L12.7969 6.60938L19.9688 7.21875Z' fill='%234F4F4F'/%3E%3C/svg%3E") left no-repeat;
+}
+
+.list-item--important .list-item__mark {
+  background: #C2C2C2;
+}
+
+.list-item--done .list-item__text {
+  text-decoration: line-through;
+}
+
+.list-item--done:hover .list-item__mark{
+  display: none;
+}

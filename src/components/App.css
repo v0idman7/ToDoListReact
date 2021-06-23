@@ -1,0 +1,24 @@
+.header {
+  padding: 20px 0 0 23px;
+}
+    
+.header::before {
+  content: '';
+  position: absolute;
+  top: 218px;
+  right: 6px;
+  z-index: -1;
+  width: 903px;
+  height: 735px;
+  background: url('../images/design/Background.png') top right no-repeat;
+}
+
+@media (max-width: 640px) {
+  .header::before {
+    top: 270px;
+    right: -20px;
+    width: 450px;
+    height: 365px;
+    background-size: 60%;
+  }
+}

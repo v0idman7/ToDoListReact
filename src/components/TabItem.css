@@ -1,0 +1,39 @@
+.tab__items {
+  max-width: 175px;
+  flex-grow: 1;
+  list-style-type: none;
+}
+
+.tab__links {
+  height: 50px;
+  width: 100%;
+  margin: 0;
+  padding-top: 15px;
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  color: #53565A;
+  background-color: #FFFFFF;
+  border: 0;
+  border-top: 4px solid #FFFFFF;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.tab__links:hover, .tab__links:focus{
+  border-color: #E2E2E2;
+  opacity: 0.75;
+}
+
+.tab__links--active {
+  border-color: #2F80ED;
+  opacity: 1;
+}
+
+.tab__links:hover {
+  border-color: #2F80ED;
+  opacity: 1;
+}
+
